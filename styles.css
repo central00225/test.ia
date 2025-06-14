@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+nav button {
+  margin-right: 10px;
+}
+.onglet {
+  display: none;
+}
+.active {
+  display: block;
+}
+video, canvas {
+  display: none;
+  margin-top: 10px;
+}
+img {
+  max-width: 100px;
+  margin: 5px;
+} 

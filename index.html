@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Site Photo IA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>📸 Mon Site Photo IA</h1>
+  <nav>
+    <button onclick="switchTab('invite')">👤 Invité</button>
+    <button onclick="switchTab('admin')">🔐 Admin</button>
+  </nav>
+
+  <div id="invite" class="onglet active">
+    <h2>Bienvenue</h2>
+    <button id="startBtn">Commencer</button>
+    <video id="video" autoplay></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <form id="form" style="display:none;">
+      <label>Votre nom : <input type="text" id="name" required /></label><br /><br />
+      <button type="submit">Envoyer</button>
+    </form>
+    <p id="merci"></p>
+  </div>
+
+  <div id="admin" class="onglet">
+    <h2>Admin (accès restreint)</h2>
+    <div id="auth">
+      <label>Mot de passe admin : <input type="password" id="adminPass" /></label>
+      <button id="adminBtn">Accéder</button>
+    </div>
+    <div id="adminContent" style="display:none;">
+      <h3>Données reçues</h3>
+      <div id="adminData"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html> 
